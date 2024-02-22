@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'clickerZezPbn.ui'
+## Form generated from reading UI file 'clickerQfRUlj.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -18,7 +18,6 @@ THIS_DIR = os.path.dirname(__file__)
 CODE_DIR = os.path.abspath(os.path.join(THIS_DIR, '..', 'ui'))
 sys.path.append(CODE_DIR)
 import ui.resource_rc
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -462,7 +461,9 @@ class Ui_MainWindow(object):
         self.frame_25.setFrameShape(QFrame.StyledPanel)
         self.frame_25.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_17 = QHBoxLayout(self.frame_25)
+        self.horizontalLayout_17.setSpacing(0)
         self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
         self.link_mailbtn = QPushButton(self.frame_25)
         self.link_mailbtn.setObjectName(u"link_mailbtn")
 
@@ -487,6 +488,11 @@ class Ui_MainWindow(object):
         self.setting_btn.setObjectName(u"setting_btn")
 
         self.horizontalLayout_17.addWidget(self.setting_btn)
+
+        self.file_auto_btn = QPushButton(self.frame_25)
+        self.file_auto_btn.setObjectName(u"file_auto_btn")
+
+        self.horizontalLayout_17.addWidget(self.file_auto_btn)
 
 
         self.verticalLayout_8.addWidget(self.frame_25)
@@ -885,7 +891,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 406, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 397, 400))
         self.verticalLayout_20 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_20.setSpacing(0)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
@@ -974,6 +980,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addWidget(self.label_33)
 
+        self.label_36 = QLabel(self.frame_35)
+        self.label_36.setObjectName(u"label_36")
+
+        self.verticalLayout_19.addWidget(self.label_36)
+
+        self.label_37 = QLabel(self.frame_35)
+        self.label_37.setObjectName(u"label_37")
+
+        self.verticalLayout_19.addWidget(self.label_37)
+
         self.label_34 = QLabel(self.frame_35)
         self.label_34.setObjectName(u"label_34")
 
@@ -990,6 +1006,95 @@ class Ui_MainWindow(object):
         self.verticalLayout_12.addWidget(self.frame_34)
 
         self.stackedWidget.addWidget(self.setting)
+        self.file_automate = QWidget()
+        self.file_automate.setObjectName(u"file_automate")
+        self.verticalLayout_22 = QVBoxLayout(self.file_automate)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.frame_47 = QFrame(self.file_automate)
+        self.frame_47.setObjectName(u"frame_47")
+        self.frame_47.setFrameShape(QFrame.StyledPanel)
+        self.frame_47.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_33 = QHBoxLayout(self.frame_47)
+        self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
+        self.horizontalLayout_33.setContentsMargins(0, 0, 0, 0)
+        self.file_path = QLineEdit(self.frame_47)
+        self.file_path.setObjectName(u"file_path")
+
+        self.horizontalLayout_33.addWidget(self.file_path)
+
+        self.separator = QLineEdit(self.frame_47)
+        self.separator.setObjectName(u"separator")
+
+        self.horizontalLayout_33.addWidget(self.separator)
+
+
+        self.verticalLayout_22.addWidget(self.frame_47)
+
+        self.frame_48 = QFrame(self.file_automate)
+        self.frame_48.setObjectName(u"frame_48")
+        self.frame_48.setFrameShape(QFrame.StyledPanel)
+        self.frame_48.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_34 = QHBoxLayout(self.frame_48)
+        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
+        self.from_left = QRadioButton(self.frame_48)
+        self.from_left.setObjectName(u"from_left")
+        self.from_left.setChecked(True)
+
+        self.horizontalLayout_34.addWidget(self.from_left)
+
+        self.from_right = QRadioButton(self.frame_48)
+        self.from_right.setObjectName(u"from_right")
+
+        self.horizontalLayout_34.addWidget(self.from_right)
+
+        self.colum_ids = QLineEdit(self.frame_48)
+        self.colum_ids.setObjectName(u"colum_ids")
+
+        self.horizontalLayout_34.addWidget(self.colum_ids)
+
+
+        self.verticalLayout_22.addWidget(self.frame_48)
+
+        self.frame_49 = QFrame(self.file_automate)
+        self.frame_49.setObjectName(u"frame_49")
+        self.frame_49.setFrameShape(QFrame.StyledPanel)
+        self.frame_49.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_35 = QHBoxLayout(self.frame_49)
+        self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
+        self.beginning_prefix_line_edit = QLineEdit(self.frame_49)
+        self.beginning_prefix_line_edit.setObjectName(u"beginning_prefix_line_edit")
+
+        self.horizontalLayout_35.addWidget(self.beginning_prefix_line_edit)
+
+        self.center_prefix_line_edit = QLineEdit(self.frame_49)
+        self.center_prefix_line_edit.setObjectName(u"center_prefix_line_edit")
+
+        self.horizontalLayout_35.addWidget(self.center_prefix_line_edit)
+
+        self.end_prefix_line_edit = QLineEdit(self.frame_49)
+        self.end_prefix_line_edit.setObjectName(u"end_prefix_line_edit")
+
+        self.horizontalLayout_35.addWidget(self.end_prefix_line_edit)
+
+
+        self.verticalLayout_22.addWidget(self.frame_49)
+
+        self.file_read_btn = QPushButton(self.file_automate)
+        self.file_read_btn.setObjectName(u"file_read_btn")
+
+        self.verticalLayout_22.addWidget(self.file_read_btn)
+
+        self.speci_text_fix = QPlainTextEdit(self.file_automate)
+        self.speci_text_fix.setObjectName(u"speci_text_fix")
+
+        self.verticalLayout_22.addWidget(self.speci_text_fix)
+
+        self.file_text_list = QListWidget(self.file_automate)
+        self.file_text_list.setObjectName(u"file_text_list")
+
+        self.verticalLayout_22.addWidget(self.file_text_list)
+
+        self.stackedWidget.addWidget(self.file_automate)
 
         self.horizontalLayout_18.addWidget(self.stackedWidget)
 
@@ -1003,7 +1108,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1023,7 +1128,7 @@ class Ui_MainWindow(object):
         self.x_pos_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"X Position", None))
         self.y_pos_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Y Position", None))
         self.action_type_cp.setText("")
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Key Action", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Keyword Action", None))
         self.clear_btn.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
         self.add_btn.setText(QCoreApplication.translate("MainWindow", u"ADD", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Select Action", None))
@@ -1042,6 +1147,7 @@ class Ui_MainWindow(object):
         self.usr_name_btn.setText(QCoreApplication.translate("MainWindow", u"User Name", None))
         self.cmnt_page.setText(QCoreApplication.translate("MainWindow", u"Comment", None))
         self.setting_btn.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.file_auto_btn.setText(QCoreApplication.translate("MainWindow", u"File Auto", None))
         self.add_link_mail_btn.setText(QCoreApplication.translate("MainWindow", u"Add Gmail", None))
         self.add_bulk_mail.setText(QCoreApplication.translate("MainWindow", u"Add Bulk Gmail", None))
         self.gmail_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Gmail", None))
@@ -1080,6 +1186,19 @@ class Ui_MainWindow(object):
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"up_arw: Press Up Arrow key", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"down_arw: Press Down arrow key", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"page_up: Press Page up Key", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"enter:press enter", None))
+        self.label_37.setText(QCoreApplication.translate("MainWindow", u"file_list:gate data from file list one by one", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"page_down: Press page down key", None))
+        self.file_path.setText("")
+        self.file_path.setPlaceholderText(QCoreApplication.translate("MainWindow", u"file path", None))
+        self.separator.setPlaceholderText(QCoreApplication.translate("MainWindow", u"data separator prefix", None))
+        self.from_left.setText(QCoreApplication.translate("MainWindow", u"Left>", None))
+        self.from_right.setText(QCoreApplication.translate("MainWindow", u"<Right", None))
+        self.colum_ids.setPlaceholderText(QCoreApplication.translate("MainWindow", u"add column numbers to scrap", None))
+        self.beginning_prefix_line_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"beginning prefix charactor", None))
+        self.center_prefix_line_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"middle prefix charactor", None))
+        self.end_prefix_line_edit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"end prefix charactor", None))
+        self.file_read_btn.setText(QCoreApplication.translate("MainWindow", u"Read File", None))
+        self.speci_text_fix.setPlaceholderText(QCoreApplication.translate("MainWindow", u"add specila text to add on", None))
     # retranslateUi
 

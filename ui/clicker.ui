@@ -396,7 +396,7 @@
                    <item>
                     <widget class="QLabel" name="label_8">
                      <property name="text">
-                      <string>Key Action</string>
+                      <string>Keyword Action</string>
                      </property>
                     </widget>
                    </item>
@@ -770,6 +770,21 @@
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QPushButton" name="link_mailbtn">
             <property name="text">
@@ -805,6 +820,13 @@
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="QPushButton" name="file_auto_btn">
+            <property name="text">
+             <string>File Auto</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -835,7 +857,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>4</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="link_mail">
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1352,7 +1374,7 @@
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>406</width>
+                      <width>397</width>
                       <height>400</height>
                      </rect>
                     </property>
@@ -1496,6 +1518,20 @@
                          </widget>
                         </item>
                         <item>
+                         <widget class="QLabel" name="label_36">
+                          <property name="text">
+                           <string>enter:press enter</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_37">
+                          <property name="text">
+                           <string>file_list:gate data from file list one by one</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
                          <widget class="QLabel" name="label_34">
                           <property name="text">
                            <string>page_down: Press page down key</string>
@@ -1511,6 +1547,137 @@
                  </item>
                 </layout>
                </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="file_automate">
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <item>
+               <widget class="QFrame" name="frame_47">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="file_path">
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>file path</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="separator">
+                   <property name="placeholderText">
+                    <string>data separator prefix</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_48">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_34">
+                 <item>
+                  <widget class="QRadioButton" name="from_left">
+                   <property name="text">
+                    <string>Left&gt;</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="from_right">
+                   <property name="text">
+                    <string>&lt;Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="colum_ids">
+                   <property name="placeholderText">
+                    <string>add column numbers to scrap</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_49">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                 <item>
+                  <widget class="QLineEdit" name="beginning_prefix_line_edit">
+                   <property name="placeholderText">
+                    <string>beginning prefix charactor</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="center_prefix_line_edit">
+                   <property name="placeholderText">
+                    <string>middle prefix charactor</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="end_prefix_line_edit">
+                   <property name="placeholderText">
+                    <string>end prefix charactor</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="file_read_btn">
+                <property name="text">
+                 <string>Read File</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="speci_text_fix">
+                <property name="placeholderText">
+                 <string>add specila text to add on</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="file_text_list"/>
               </item>
              </layout>
             </widget>

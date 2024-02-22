@@ -24,6 +24,8 @@ new_gmail_password = ""
 new_gmail_link = ""
 mail_count_from = 0
 login_mail = ""
+file_auto_item_count = 0
+file_auto_current_item_count_number = 0
 
 
 class login_ui(QMainWindow):
@@ -155,6 +157,8 @@ class Main_ui(QMainWindow):
         self.ui.new_mail_btn.clicked.connect(self.new_mail_page)
         self.ui.usr_name_btn.clicked.connect(self.usr_name_page)
         self.ui.setting_btn.clicked.connect(self.setting_page)
+        self.ui.file_auto_btn.clicked.connect(self.file_auto_page)
+
 
         self.ui.del_row.clicked.connect(self.delete_row)
         self.ui.cmnt_page.clicked.connect(self.comment_page)
@@ -165,6 +169,47 @@ class Main_ui(QMainWindow):
         self.ui.new_mail_list.itemClicked.connect(self.new_gmail_clicked)
 
         self.ui.add_link_mail_btn.clicked.connect(self.add_link_mail_single)
+
+        self.ui.file_read_btn.clicked.connect(self.process_file)
+
+    def process_file(self):
+
+        self.ui.file_text_list.clear()
+        file_path = self.ui.file_path.text()
+        separator = self.ui.separator.text()
+        alignment = "left" if self.ui.from_left.isChecked() else "right"
+        column_ids = [int(id) for id in self.ui.colum_ids.text().split(',')]
+        beginning_prefix = self.ui.beginning_prefix_line_edit.text()
+        center_prefix = self.ui.center_prefix_line_edit.text()
+        end_prefix = self.ui.end_prefix_line_edit.text()
+
+        try:
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                result = []
+                for line in lines:
+                    parts = line.strip().split(separator)
+                    selected_columns = [parts[i] for i in column_ids if i < len(parts)]
+                    formatted_line = ""
+                    if beginning_prefix:
+                        formatted_line += beginning_prefix
+                    for i, col in enumerate(selected_columns):
+                        if i > 0 and center_prefix:
+                            formatted_line += center_prefix
+                        formatted_line += col
+                    if end_prefix:
+                        formatted_line += end_prefix
+                    if alignment == "right":
+                        formatted_line = formatted_line[::-1]
+                    # result.append(formatted_line)
+                    self.ui.file_text_list.addItem(formatted_line)
+        except FileNotFoundError:
+            self.ui.label_4.setText("File not found.")
+        except Exception as e:
+            self.ui.label_4.setText(f"An error occurred: {str(e)}")
+
+        # print(self.ui.file_text_list.item(5).text())
+        # print(self.ui.file_text_list.count())
 
 
     def task_icon(self):
@@ -356,7 +401,7 @@ class Main_ui(QMainWindow):
     def start_actions(self):
 
         global new_gmail, new_gmail_link, new_gmail_password
-        global mail_count_from, login_mail
+        global mail_count_from, login_mail, file_auto_item_count, file_auto_current_item_count_number
 
         db = sqlite3.connect("data/local.db")
         db.text_factory
@@ -458,6 +503,25 @@ class Main_ui(QMainWindow):
 
 
                 pyautogui.press("pgdn")
+
+            elif a_type == "key" and cont == "enter":
+
+
+                pyautogui.press("enter")
+
+            elif a_type == "key" and cont == "file_list":
+
+
+                file_auto_item_count = self.ui.file_text_list.count()
+
+                list_text = self.ui.file_text_list.item(file_auto_current_item_count_number).text()
+                fix_text = self.ui.speci_text_fix.toPlainText()
+
+                final_text = list_text + fix_text
+
+                pyautogui.write(final_text)
+
+                file_auto_current_item_count_number += 1
 
 
             elif a_type == "key" and cont == "login_mail":
@@ -572,6 +636,11 @@ class Main_ui(QMainWindow):
     def setting_page(self):
 
         self.ui.stackedWidget.setCurrentWidget(self.ui.setting)
+
+    def file_auto_page(self):
+
+        self.ui.stackedWidget.setCurrentWidget(self.ui.file_automate)
+
 
 
     def add_link_mail_single(self):
